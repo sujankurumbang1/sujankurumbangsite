@@ -1,0 +1,48 @@
+/* Theme */
+:root {
+  --gradient-1: radial-gradient(1200px 600px at 10% 10%, rgba(13,110,253,.12), transparent 60%), radial-gradient(1200px 600px at 90% 0%, rgba(32,201,151,.12), transparent 60%), radial-gradient(1000px 500px at 50% 100%, rgba(111,66,193,.12), transparent 50%);
+}
+
+html, body { scroll-behavior: smooth; }
+
+.py-6 { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+
+/* Navbar */
+#mainNav .nav-link { font-weight: 500; }
+#mainNav .nav-link.active { color: var(--bs-primary) !important; }
+
+/* Hero */
+.gradient-hero { background: var(--gradient-1); }
+.glass { backdrop-filter: blur(8px); background: rgba(255,255,255,.7); border: 1px solid rgba(0,0,0,.05); }
+
+.profile-wrap { position: relative; width: 340px; height: 340px; border-radius: 50%; padding: 10px; background: linear-gradient(135deg, rgba(13,110,253,.25), rgba(32,201,151,.25)); }
+.profile-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 6px solid #fff; }
+
+.hero-shape-1, .hero-shape-2 { position: absolute; inset: 0; pointer-events: none; }
+.hero-shape-1 { background: radial-gradient(400px 200px at 15% 30%, rgba(13,110,253,.12), transparent 60%); }
+.hero-shape-2 { background: radial-gradient(600px 300px at 85% 20%, rgba(111,66,193,.12), transparent 60%); }
+
+/* Cards */
+.service-card .icon-wrap { width: 52px; height: 52px; display: grid; place-items: center; background: rgba(13,110,253,.1); color: var(--bs-primary); border-radius: 12px; }
+.service-card .sidebar-icon { font-size: 1.25rem; }
+.service-card { transition: transform .2s ease, box-shadow .2s ease; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 1rem 2rem rgba(0,0,0,.08) !important; }
+
+.project-card { transition: transform .2s ease, box-shadow .2s ease; }
+.project-card:hover { transform: translateY(-4px); box-shadow: 0 1rem 2rem rgba(0,0,0,.08) !important; }
+
+/* Stats */
+.stat { border: 1px solid rgba(0,0,0,.05); }
+
+/* Back to top */
+.btn-to-top { position: fixed; right: 1.25rem; bottom: 1.25rem; border-radius: 999px; width: 44px; height: 44px; display: grid; place-items: center; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .2s ease; }
+.btn-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+
+/* Utilities */
+.shadow-soft { box-shadow: 0 0.25rem 1rem rgba(0,0,0,.06); }
+
+@media (max-width: 991.98px) {
+  .profile-wrap { width: 260px; height: 260px; }
+}
+
+
